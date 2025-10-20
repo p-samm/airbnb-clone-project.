@@ -190,4 +190,65 @@ Administrators can monitor platform activity, manage users, and oversee listings
 
 
 
+---
+
+## API Security
+
+### Objective
+Understand the importance of securing the backend APIs and protecting sensitive data throughout the system.
+
+---
+
+### Key Security Measures
+
+#### 1. Authentication  
+Authentication ensures that only verified users can access the system.  
+- **Implementation:** Users will log in using secure tokens (e.g., JWT – JSON Web Tokens).  
+- **Importance:** Prevents unauthorized access and ensures that every request comes from a valid user.
+
+---
+
+#### 2. Authorization  
+Authorization defines what each authenticated user is allowed to do.  
+- **Implementation:** Role-based access control (RBAC) will be used to separate permissions between guests, property owners, and administrators.  
+- **Importance:** Protects sensitive actions (like deleting listings or processing payments) from being accessed by unauthorized users.
+
+---
+
+#### 3. Data Encryption  
+Data transmitted between the frontend and backend will be encrypted using HTTPS and SSL/TLS protocols.  
+- **Implementation:** Secure connections will be enforced on all API endpoints.  
+- **Importance:** Protects user credentials, payment data, and personal information from being intercepted or stolen.
+
+---
+
+#### 4. Rate Limiting  
+Rate limiting controls how many API requests a user can make within a certain period.  
+- **Implementation:** Use tools like Django REST Framework throttling or API gateways to prevent abuse.  
+- **Importance:** Prevents denial-of-service (DoS) attacks and helps maintain server stability.
+
+---
+
+#### 5. Input Validation and Sanitization  
+All incoming data will be validated before processing.  
+- **Implementation:** Validate form inputs and API requests to reject unexpected or malicious data.  
+- **Importance:** Prevents security vulnerabilities such as SQL injection, XSS (Cross-Site Scripting), and data corruption.
+
+---
+
+#### 6. Secure Payment Processing  
+All payment-related transactions will be handled through verified third-party gateways.  
+- **Implementation:** Integrate trusted payment APIs that comply with PCI-DSS standards.  
+- **Importance:** Ensures financial data remains confidential and transactions are securely handled.
+
+---
+
+#### 7. Logging and Monitoring  
+The system will log important activities and monitor suspicious behavior.  
+- **Implementation:** Use monitoring tools to detect failed login attempts or unauthorized access patterns.  
+- **Importance:** Helps identify and respond quickly to potential security breaches.
+
+---
+
+
 
