@@ -39,3 +39,104 @@ A **containerization tool** that ensures consistent development and deployment e
 
 ### CI/CD Pipelines  
 Implements **automated testing and deployment pipelines**, enabling continuous integration and delivery. Ensures code changes are tested, validated, and deployed efficiently with minimal downtime.
+
+
+
+---
+
+## Database Design
+
+### Objective
+Understand how the database will be structured and how different entities (tables) connect to each other.
+
+---
+
+### Users  
+**Purpose:** Stores information about people who use the platform — both property owners and guests.  
+
+**Key Fields:**  
+- `id`: Unique identifier for each user  
+- `name`: Full name of the user  
+- `email`: Contact email address  
+- `password`: Encrypted user password  
+- `role`: Defines whether the user is an owner or a guest  
+
+**Relationships:**  
+- A **user** can own multiple **properties**.  
+- A **user** can make multiple **bookings** and **reviews**.
+
+---
+
+### Properties  
+**Purpose:** Represents the listings or accommodations available for booking.  
+
+**Key Fields:**  
+- `id`: Unique identifier for each property  
+- `owner_id`: The user who owns the property  
+- `title`: Property name or title  
+- `description`: Short summary of the property  
+- `price_per_night`: Cost per night  
+
+**Relationships:**  
+- Each **property** belongs to one **user** (the owner).  
+- A **property** can have many **bookings** and **reviews**.
+
+---
+
+### Bookings  
+**Purpose:** Tracks reservations made by users for specific properties.  
+
+**Key Fields:**  
+- `id`: Unique booking identifier  
+- `user_id`: The guest who made the booking  
+- `property_id`: The property being booked  
+- `check_in`: Start date of the booking  
+- `check_out`: End date of the booking  
+
+**Relationships:**  
+- A **booking** belongs to a **user** (the guest).  
+- A **booking** also belongs to a **property**.  
+- Each **booking** can have one related **payment** record.
+
+---
+
+### Reviews  
+**Purpose:** Stores feedback and ratings from guests who stayed at a property.  
+
+**Key Fields:**  
+- `id`: Unique review identifier  
+- `user_id`: The guest who wrote the review  
+- `property_id`: The property being reviewed  
+- `rating`: Numerical score (e.g., 1–5)  
+- `comment`: Written feedback  
+
+**Relationships:**  
+- A **review** belongs to one **user** and one **property**.  
+- A **property** can have multiple **reviews**.
+
+---
+
+### Payments  
+**Purpose:** Records all payment transactions made for bookings.  
+
+**Key Fields:**  
+- `id`: Unique payment identifier  
+- `booking_id`: The booking being paid for  
+- `amount`: Total amount paid  
+- `payment_method`: Type of payment (e.g., card, PayPal)  
+- `status`: Whether the payment is completed, pending, or failed  
+
+**Relationships:**  
+- Each **payment** belongs to one **booking**.  
+- A **booking** can have one **payment** record.
+
+---
+
+### Entity Relationships Summary  
+- A **User** can own many **Properties**.  
+- A **User** can make many **Bookings**.  
+- A **Property** can have many **Bookings** and **Reviews**.  
+- Each **Booking** belongs to one **Property** and one **User**.  
+- Each **Payment** is linked to one **Booking**.  
+- Each **Review** is written by a **User** about a **Property**.
+
