@@ -139,4 +139,55 @@ Understand how the database will be structured and how different entities (table
 - Each **Booking** belongs to one **Property** and one **User**.  
 - Each **Payment** is linked to one **Booking**.  
 - Each **Review** is written by a **User** about a **Property**.
+- 
+
+---
+
+## Feature Breakdown
+
+### Objective
+Detail the key features of the **Airbnb Clone** project and explain how each contributes to the overall functionality of the system.
+
+---
+
+### 1. User Management  
+This feature allows users to create accounts, log in securely, and manage their profiles. It includes role-based access control, ensuring that property owners and guests have different permissions within the platform.
+
+---
+
+### 2. Property Management  
+Property owners can add, update, and remove property listings. Each listing includes details such as title, description, price per night, and location, allowing guests to easily browse and find suitable accommodations.
+
+---
+
+### 3. Booking System  
+Guests can search for available properties and make bookings for specific dates. The system handles availability checks, prevents double bookings, and tracks the booking status from pending to confirmed or canceled.
+
+---
+
+### 4. Review and Rating System  
+After completing a stay, guests can leave reviews and ratings for properties. This feature helps maintain transparency, build trust, and assist other users in making informed booking decisions.
+
+---
+
+### 5. Payment Integration  
+The payment system allows users to securely pay for bookings using different payment methods. It ensures that each transaction is recorded, verified, and linked to the correct booking for accountability and smooth financial management.
+
+---
+
+### 6. Notifications and Messaging  
+This feature enables users to receive notifications about booking confirmations, cancellations, and payments. It may also support direct communication between property owners and guests for better coordination.
+
+---
+
+### 7. Search and Filtering  
+Guests can search properties using filters such as location, price range, and amenities. This enhances user experience by allowing quick discovery of properties that meet specific preferences.
+
+---
+
+### 8. Admin Dashboard  
+Administrators can monitor platform activity, manage users, and oversee listings and transactions. This feature helps maintain the system’s integrity, prevent misuse, and ensure smooth operations.
+
+
+
 
