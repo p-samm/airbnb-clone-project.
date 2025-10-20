@@ -250,6 +250,41 @@ The system will log important activities and monitor suspicious behavior.
 
 ---
 
+---
+
+## CI/CD Pipeline
+
+### Objective
+Understand how Continuous Integration and Continuous Deployment (CI/CD) pipelines contribute to the development process.
+
+---
+
+### What is a CI/CD Pipeline?
+A **CI/CD pipeline** is an automated process that helps developers build, test, and deploy code efficiently.  
+- **Continuous Integration (CI)** means that every time new code is pushed, it is automatically tested and integrated with the main codebase.  
+- **Continuous Deployment (CD)** ensures that, once the code passes tests, it is automatically deployed to a live or staging environment.
+
+---
+
+### Why It’s Important
+- **Faster Development:** Automates repetitive tasks like testing and deployment, allowing developers to focus on writing code.  
+- **Early Error Detection:** Catches bugs and integration issues early through automated tests.  
+- **Consistency:** Ensures each deployment is performed the same way, reducing human error.  
+- **Reliability:** Keeps the application stable, as only code that passes all checks moves to production.  
+- **Collaboration:** Makes it easier for multiple developers to work together without breaking the project.
+
+---
+
+### Tools Used
+1. **GitHub Actions:** Automates tasks like running tests, linting code, and deploying to servers whenever you push updates to the repository.  
+2. **Docker:** Packages the application into containers so it runs consistently across different environments (development, testing, and production).  
+3. **Jenkins (optional):** Can be used for advanced build automation and integration with other tools.  
+4. **Heroku / AWS / Render:** Deployment platforms where the CI/CD pipeline can automatically release new versions of the backend.
+
+---
+
+
+
 
 
 
